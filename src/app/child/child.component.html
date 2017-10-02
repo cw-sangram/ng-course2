@@ -2,16 +2,9 @@
   <div >
     <h4>Child Component with Select</h4>
     <div >
-    <ng-content select="header"></ng-content>
-    </div>
-    <div >
-    <ng-content select="section"></ng-content>
-    </div>
-    <div >
-    <ng-content select=".class-select"></ng-content>
-    </div>
-    <div >
-    <ng-content select="footer"></ng-content>
-    </div>
+      header:--<ng-content select='header'></ng-content>
+      body:--<ng-content select='body'></ng-content>
+      footer:--<ng-content select='footer'></ng-content>
+     <b><ng-content select='.new_class'></ng-content></b> 
     </div>
   </div>

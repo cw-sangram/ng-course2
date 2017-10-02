@@ -1,0 +1,8 @@
+<p>
+  master works!</p>
+  Count: {{ count }} -
+  <button (click)="increment()">Increment</button>
+
+  <div *ngFor="let epi of episodes">
+    {{epi.title}} by {{epi.director}}
+  </div>

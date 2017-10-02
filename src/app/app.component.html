@@ -1,34 +1,18 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    11 Welcome to {{title}}!
+    Welcome to {{title}}!
   </h1>
   <a routerLink='hello'>Hello</a>
+  <a routerLink='master'>master</a>
   <router-outlet></router-outlet>
 </div>
-<h3>children</h3>
-<input [(ngModel)]='curval' type="text"> parent count: {{parentcount}}
-<app-hello #helloapp [count]='curval' (result)='onValueChange($event)'></app-hello>
-my name is : {{helloapp.myname}}!
-<!-- <h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://blog.angular.io//">Angular blog</a></h2>
-  </li>
-</ul> -->
-
-<h2>Projections</h2>
-<rio-child>
-  <section>Section Content</section>
-  <div class="class-select">
-    <p>div with .class-select</p>
+<div *ngIf='curval == 5'>
+value is 5
+</div>
+<div *ngIf='curval != 5'>
+  value is not 5
   </div>
-  <footer>Footer Content</footer>
-  <header>Header Content</header>
-</rio-child>
+<app-style>
+  hello world
+</app-style>

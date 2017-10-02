@@ -7,7 +7,7 @@ import {NgForm} from '@angular/forms'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'ng course 2';
   curval = 5;
   parentcount = 0;
 
