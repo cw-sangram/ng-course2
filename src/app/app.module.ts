@@ -7,6 +7,7 @@ import { AppRoutingModule } from "./app.routing";
 import { ChildComponent } from "./child/child.component";
 import { MasterComponent } from "./master/master.component";
 import { AppStyleComponent } from './app-style/app-style.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { AppStyleComponent } from './app-style/app-style.component';
     AppStyleComponent,
   ],
   imports: [
-    BrowserModule,AppRoutingModule,FormsModule
+    BrowserModule,AppRoutingModule,FormsModule,NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
