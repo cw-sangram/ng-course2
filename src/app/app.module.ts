@@ -7,7 +7,12 @@ import { AppRoutingModule } from "./app.routing";
 import { ChildComponent } from "./child/child.component";
 import { MasterComponent } from "./master/master.component";
 import { AppStyleComponent } from './app-style/app-style.component';
+import { NgClassComponent } from './Controls/ngclass.component';
+import { NgforComponent } from './Controls/ngfor.component';
+
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
+
 
 @NgModule({
   declarations: [
@@ -16,6 +21,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     ChildComponent,
     MasterComponent,
     AppStyleComponent,
+    NgClassComponent,
+    NgforComponent,
   ],
   imports: [
     BrowserModule,AppRoutingModule,FormsModule,NgbModule.forRoot()

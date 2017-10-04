@@ -3,14 +3,9 @@
   <h1>
     Welcome to {{title}}!
   </h1>
-  <a routerLink='hello'>Hello</a>
-  <a routerLink='master'>master</a>
+  <a class="btn btn-primary" routerLink='hello'>Hello</a>
+  <a class="btn btn-primary" routerLink='master'>master</a>
+  <a class="btn btn-primary" routerLink='ngclass'>ngClass</a>
+  <a class="btn btn-primary" routerLink='ngFor'>ngFor</a>
   <router-outlet></router-outlet>
 </div>
-<div *ngIf='curval == 5'>
-value is 5
-</div>
-
-<app-style>
-  hello world
-</app-style>

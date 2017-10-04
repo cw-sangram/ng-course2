@@ -1,0 +1,17 @@
+<div class="container">
+
+    <p>
+        <ngb-alert [dismissible]="true">
+          <strong>ngFor example !</strong> 
+        </ngb-alert>
+    </p>
+  <div class="row">
+    <ol>
+      <li *ngFor="let episode of episodes;let isOdd = odd; let isEven = even; let isFirst = first; let isLast = last;" [ngStyle]="{
+        'color': isEven? 'red' :'green',
+        'font-weight': isFirst? 'bold': '' }">
+        {{episode.title}} by {{episode.director}}
+      </li>
+    </ol>
+  </div>
+</div>
