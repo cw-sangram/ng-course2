@@ -7,11 +7,11 @@
     </p>
   <div class="row">
     <ol>
-      <li *ngFor="let episode of episodes;let isOdd = odd; let isEven = even; let isFirst = first; let isLast = last;" [ngStyle]="{
+      <!-- <li *ngFor="let episode of episodes;let isOdd = odd; let isEven = even; let isFirst = first; let isLast = last;" [ngStyle]="{
         'color': isEven? 'red' :'green',
         'font-weight': isFirst? 'bold': '' }">
         {{episode.title}} by {{episode.director}}
-      </li>
+      </li> -->
     </ol>
   </div>
 </div>
@@ -20,3 +20,10 @@
     let arr = [1,2,3];
     console.log([...arr,4,5]); // [1,2,3,4,5]
 </pre>
+<h3>Track by</h3>
+<div>
+  <app-listitem *ngFor="let currentItem of episodes" [listItem]="currentItem">
+    hello {{ currentItem.title}}
+  </app-listitem>
+  <button class="btn-success" [hidden]='newEpisodes.length === 0' (click)='addEpisode()'>add episode</button>
+</div>

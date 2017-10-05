@@ -11,6 +11,7 @@ import { NgClassComponent } from './Controls/ngclass.component';
 import { NgforComponent } from './Controls/ngfor.component';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { ForExampleComponent } from './Controls/for-example.component';
 
 
 
@@ -23,6 +24,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     AppStyleComponent,
     NgClassComponent,
     NgforComponent,
+    ForExampleComponent,
   ],
   imports: [
     BrowserModule,AppRoutingModule,FormsModule,NgbModule.forRoot()
