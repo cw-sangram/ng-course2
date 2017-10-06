@@ -22,7 +22,7 @@
 </pre>
 <h3>Track by</h3>
 <div>
-  <app-listitem *ngFor="let currentItem of episodes" [listItem]="currentItem">
+  <app-listitem *ngFor="let currentItem of episodes; trackBy: trackEpisodes" [listItem]="currentItem">
     hello {{ currentItem.title}}
   </app-listitem>
   <button class="btn-success" [hidden]='newEpisodes.length === 0' (click)='addEpisode()'>add episode</button>

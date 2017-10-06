@@ -1,0 +1,24 @@
+<p>
+  ng-switch works! current tab is {{tab}}
+</p>
+<div id="container">
+  <ul class="tabs">
+      <li (click)="setTab(1)" class="tab-link" [ngClass]="isActive(1)? 'current' : ''">Tab 1</li>
+      <li (click)="setTab(2)" class="tab-link" [ngClass]="isActive(2)? 'current' : ''">Tab 2</li>
+      <li (click)="setTab(3)" class="tab-link" [ngClass]="isActive(3)? 'current' : ''">Tab 3</li>
+  </ul>
+  <div [ngSwitch]="tab" >
+      <div *ngSwitchCase="1" class="tab-content current" >
+          <p>Tab 1</p>
+      </div>
+      <div *ngSwitchCase="2" class="tab-content current">
+          <p>Tab 2</p>
+      </div>
+      <div *ngSwitchCase="3" class="tab-content current">
+          <p>Tab 3</p>
+      </div>
+      <div *ngSwitchDefault class="tab-content current">
+          <p>Default tab - 4</p>
+      </div>
+  </div>
+</div>

@@ -19,7 +19,7 @@ export class NgforComponent implements OnInit {
     ];
 
     newEpisodes = [
-      { title: 'aaa', director: 'a a a', id:8 },
+      { title: 'Inception', director: 'Christophar Nolan', id:8 },
       { title: 'bbb', director: 'Tim Van Patten', id:9  },
       { title: 'ccc', director: 'Brian Kirk', id:10   },
       { title: 'ddd', director: 'Brian Kirk', id:11   },
@@ -27,7 +27,17 @@ export class NgforComponent implements OnInit {
   constructor() { }
 
   addEpisode(){
-    this.episodes = [...this.episodes, this.newEpisodes.pop()];
+    // Creating a new object from existing array to simulate real time scenerio when API will
+    // fetch the new results
+    let newEpisodes = JSON.parse(JSON.stringify(this.episodes));
+    this.episodes = [...newEpisodes, this.newEpisodes.pop()];
+    // Check console and you can see the whole array is getting created and added to the dom
+    // Now add trackby paramter and see the difference that only new parameter which has been created is added
+
+  }
+
+  trackEpisodes(index:number, episode:any) : number{
+    return episode.id;
   }
   ngOnInit() {
   }

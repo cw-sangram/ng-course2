@@ -2,15 +2,15 @@
 import { RouterModule, Routes } from '@angular/router';
 import { HelloComponent } from "./hello/hello.component";
 import { MasterComponent } from "./master/master.component";
-import { NgClassComponent } from "./Controls/ngclass.component";
-import { NgforComponent } from "./Controls/ngfor.component";
+import { NgClassComponent, NgforComponent, NgSwitchComponent } from './Controls/index';
 
 
 const routes: Routes = [
      { path: 'hello', component: HelloComponent },
      { path: 'master', component: MasterComponent },
-     { path: 'ngclass' , component: NgClassComponent},
-     { path: 'ngFor' , component: NgforComponent}
+     { path: 'ngClass' , component: NgClassComponent},
+     { path: 'ngFor' , component: NgforComponent},
+     { path: 'ngSwitch' , component: NgSwitchComponent}
 ];
 
 @NgModule({
