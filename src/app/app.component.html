@@ -1,12 +1,22 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
+<div class="jumbotron text-center" style="height:60px">
+  <h3>ng course 2 cookbook</h3>
+  <p>Resize this responsive page to see the effect!</p>
+</div>
+
+<div class="text-center">
   <a class="btn btn-primary" routerLink='hello'>Hello</a>
   <a class="btn btn-primary" routerLink='master'>master</a>
   <a class="btn btn-primary" routerLink='ngClass'>ngClass</a>
   <a class="btn btn-primary" routerLink='ngFor'>ngFor</a>
   <a class="btn btn-primary" routerLink='ngSwitch'>ngSwitch</a>
+  <a class="btn btn-success" routerLink='viewChild'>@ViewChild()</a>
+  <a class="btn btn-success" routerLink='contentChild'>@ContentChild()</a>
+  <br/>
+  <a class="btn btn-primary" routerLink='observable'>Observable</a>
+  <a class="btn btn-primary" routerLink='http'>http</a>
+  
+</div>
+<div class="container text-center">
   <router-outlet></router-outlet>
 </div>

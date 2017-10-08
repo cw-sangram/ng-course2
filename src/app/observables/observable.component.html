@@ -1,0 +1,25 @@
+<b>Angular Component Using Observables!</b>
+<h6 style="margin-bottom: 0">VALUES:</h6>
+<div *ngFor="let value of values">- {{ value }}</div>
+<h6 style="margin-bottom: 0">ERRORs:</h6>
+<div>Errors: {{anyErrors}}</div>
+<h6 style="margin-bottom: 0">FINISHED:</h6>
+<div>Finished: {{ finished }}</div>
+<button style="margin-top: 2rem;" (click)="setData()">Init</button>
+
+<h3>Javascript: Arrow functions </h3>
+<code>function funcName(params) &#123;
+    return params + 2;
+  &#125;</code>
+can be shorterned Using <br/>
+<code>var funcName() = params => params + 2</code>
+
+<p><strong>Examples</strong></p><br/>
+<code>(parameters) => &#123; statements &#125;</code><br/>
+If we have no parameters, we express an arrow function like this:<br/>
+<code>() => &#123; statements &#125;</code><br/>
+When you only have one parameter, the opening parenthesis are optional:<br/>
+<code>parameters => &#123; statements &#125;</code><br/>
+Finally, if you are returning an expression, you remove the brackets:<br/>
+<code>parameters => expression</code><br/>
+reference: https://codeburst.io/javascript-arrow-functions-for-beginners-926947fc0cdc

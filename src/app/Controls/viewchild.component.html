@@ -1,0 +1,18 @@
+<p>ViewChild is a way to access a Child components's properties and functions and trigger them from parent</p>
+<div>
+        <code>@ViewChild(AlertComponent) alertBox : AlertComponent; <br/>
+            this.alertBox.show();
+        </code>
+</div>
+
+<app-alert><strong>boom boom !</strong></app-alert>
+<button (click)="clickMe()">Click here</button>
+
+
+<h4>use @ViewChildren using QueryList</h4>
+<app-alert>first alert</app-alert>
+<app-alert>second alert</app-alert>
+<app-alert>third alert</app-alert>
+<app-alert>fourth alert</app-alert>
+<button (click)="showAll()">Click here</button>
+<p>Note: Note that view children will not be set until the ngAfterViewInit lifecycle hook is called.</p>

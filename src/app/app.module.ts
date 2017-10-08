@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+
 import { AppComponent } from './app.component';
 import { HelloComponent } from "./hello/hello.component";
 import { AppRoutingModule } from "./app.routing";
@@ -9,7 +11,12 @@ import { MasterComponent } from "./master/master.component";
 import { AppStyleComponent } from './app-style/app-style.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
-import { NgClassComponent,NgforComponent, ForExampleComponent, NgSwitchComponent } from './Controls/index';
+import { NgClassComponent,NgforComponent,
+   ForExampleComponent, NgSwitchComponent,
+   AlertComponent, ViewChildComponent, ContentChildComponent } from './Controls/index';
+import { ObservableComponent, HttpComponent } from './observables/index';
+
+
 
 
 
@@ -24,9 +31,14 @@ import { NgClassComponent,NgforComponent, ForExampleComponent, NgSwitchComponent
     NgforComponent,
     ForExampleComponent,
     NgSwitchComponent,
+    AlertComponent,
+    ViewChildComponent,
+    ContentChildComponent,
+    ObservableComponent,
+    HttpComponent
   ],
   imports: [
-    BrowserModule,AppRoutingModule,FormsModule,NgbModule.forRoot()
+    BrowserModule,AppRoutingModule,FormsModule,NgbModule.forRoot(),HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
