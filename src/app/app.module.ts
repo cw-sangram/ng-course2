@@ -14,7 +14,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { NgClassComponent,NgforComponent,
    ForExampleComponent, NgSwitchComponent,
    AlertComponent, ViewChildComponent, ContentChildComponent } from './Controls/index';
-import { ObservableComponent, HttpComponent } from './observables/index';
+import { ObservableComponent, HttpComponent, HttpSearchComponent, InjectableComponent } from './observables/index';
 
 
 
@@ -35,7 +35,9 @@ import { ObservableComponent, HttpComponent } from './observables/index';
     ViewChildComponent,
     ContentChildComponent,
     ObservableComponent,
-    HttpComponent
+    HttpComponent,
+    HttpSearchComponent,
+    InjectableComponent
   ],
   imports: [
     BrowserModule,AppRoutingModule,FormsModule,NgbModule.forRoot(),HttpModule

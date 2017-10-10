@@ -1,4 +1,35 @@
 <p>Http works</p>
-<div *ngFor='let doc of doctors'>
-{{doc.id}} {{doc.name}}
+<p># <b>map</b> will create a new array with the results of calling a provided function on every element in this array.</p>
+<p># <b>filter</b> will create a new array with all elements that pass the test implemented by a provided function.</p>
+<p>Since filter accepts an Observable , and not an array, we have to convert our array of JSON objects from data.json() to an
+    Observable stream. This is done with flatMap .</p>
+<P># <b>Flatmap</b>: transform the items emitted by an Observable into Observables, then flatten the emissions from those into
+    a single Observable</P>
+
+    <code>
+            [1,2,3].map(x => [x, x * 10])
+            // [[1, 10], [2, 20], [3, 30]]
+            
+            [1,2,3].flatMap(x => [x, x * 10])
+            // [1, 10, 2, 20, 3, 30]]
+    </code>
+    <strong><a href='https://xgrommx.github.io/rx-book/content/which_operator_do_i_use/instance_operators.html' target="_blank">
+        Operator to Use? - Instance Operators
+    </a></strong>
+<div class='row'>
+    <button class="btn-success" (click)='showAll()'>Show all</button>
+    <button class="btn-primary" (click)='filter()'>Filter</button>
+    <table *ngIf="doctors?.length > 0" class="table table-hover">
+        <tbody>
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Email</td>
+                <tr *ngFor='let doc of doctors'>
+                    <td>{{doc.id}}</td>
+                    <td>{{doc.name}}</td>
+                    <td>{{doc.email}}</td>
+                </tr>
+        </tbody>
+    </table>
 </div>

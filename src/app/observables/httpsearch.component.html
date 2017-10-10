@@ -1,0 +1,19 @@
+<p>HttpSearch works</p>
+<div class='row'>
+        <input type='text' value='tom' [(ngModel)]='txtQuery'  maxlength="20" #txtSearch />
+        <button (click)='search(txtSearch.value)' class="btn btn-primary">Search</button>
+</div>
+
+<table *ngIf="users?.length > 0" class="table table-hover">
+        <tbody>
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Email</td>
+                <tr *ngFor="let user of users">
+                    <td> {{user.id}} </td>
+                    <td> {{user.login}} </td>
+                    <td> {{user.score}} </td>
+                </tr>
+        </tbody>
+    </table>

@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HelloComponent } from "./hello/hello.component";
 import { MasterComponent } from "./master/master.component";
 import { NgClassComponent, NgforComponent, NgSwitchComponent, ViewChildComponent,ContentChildComponent } from './Controls/index';
-import { ObservableComponent, HttpComponent } from './observables/index';
+import { ObservableComponent, HttpComponent, HttpSearchComponent, InjectableComponent } from './observables/index';
 
 
 
@@ -16,7 +16,9 @@ const routes: Routes = [
      { path: 'viewChild' , component: ViewChildComponent},
      { path: 'contentChild' , component: ContentChildComponent},
      { path: 'observable' , component: ObservableComponent},
-     { path: 'http' , component: HttpComponent}
+     { path: 'http' , component: HttpComponent},
+     { path: 'httpsearch' , component: HttpSearchComponent},
+     { path: 'injectable' , component: InjectableComponent},
 ];
 
 @NgModule({
